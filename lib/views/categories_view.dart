@@ -6,12 +6,12 @@ class CategoriesView extends StatelessWidget {
   const CategoriesView({super.key});
 
   final List<CategoryModel> categories = const [
+    CategoryModel(picPath: "assets/general.avif", categoryTitle: "General"),
     CategoryModel(picPath: "assets/business.avif", categoryTitle: "Business"),
     CategoryModel(
       picPath: "assets/entertainment.avif",
       categoryTitle: "Entertainment",
     ),
-    CategoryModel(picPath: "assets/general.avif", categoryTitle: "General"),
     CategoryModel(picPath: "assets/health.avif", categoryTitle: "Health"),
     CategoryModel(picPath: "assets/science.avif", categoryTitle: "Science"),
     CategoryModel(picPath: "assets/sports.avif", categoryTitle: "Sports"),
