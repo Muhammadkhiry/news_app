@@ -9,7 +9,7 @@ class CategoryBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(7.0),
+      padding: const EdgeInsets.only(right: 7.0),
       child: Container(
         height: 151,
         width: 201,
