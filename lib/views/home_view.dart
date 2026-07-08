@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blueAccent,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

@@ -25,28 +25,33 @@ class CategoriesView extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: SizedBox(
-        height: 131,
+        height: 151,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
-          itemBuilder: (BuildContext context, int index) {
+          itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.only(right: 7.0),
-              child: Stack(
-                alignment: AlignmentDirectional.center,
-                children: [
-                  SizedBox(
-                    width: 201,
-                    child: Image.asset(
-                      categories[index].picPath,
-                      fit: BoxFit.fill,
+              padding: const EdgeInsets.all(7.0),
+              child: Container(
+                height: 151,
+                width: 201,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(categories[index].picPath),
+                    fit: BoxFit.fill,
+                  ),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Center(
+                  child: Text(
+                    categories[index].categoryTitle,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
-                    categories[index].categoryTitle,
-                    style: TextStyle(fontSize: 24, color: Colors.white),
-                  ),
-                ],
+                ),
               ),
             );
           },
@@ -55,3 +60,34 @@ class CategoriesView extends StatelessWidget {
     );
   }
 }
+
+
+//  SizedBox(
+//         height: 131,
+//         child: ListView.builder(
+//           scrollDirection: Axis.horizontal,
+//           itemCount: categories.length,
+//           itemBuilder: (BuildContext context, int index) {
+//             return Padding(
+//               padding: const EdgeInsets.only(right: 7.0),
+//               child: Stack(
+//                 alignment: AlignmentDirectional.center,
+//                 children: [
+//                   SizedBox(
+//                     width: 201,
+//                     child: Image.asset(
+//                       categories[index].picPath,
+//                       fit: BoxFit.fill,
+//                     ),
+//                   ),
+//                   Text(
+//                     categories[index].categoryTitle,
+//                     style: TextStyle(fontSize: 24, color: Colors.white),
+//                   ),
+//                 ],
+//               ),
+//             );
+//           },
+//         ),
+//       ),)
+    
