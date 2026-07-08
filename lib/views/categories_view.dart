@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/components/category_builder.dart';
 import 'package:news_app/models/category_model.dart';
 
 class CategoriesView extends StatelessWidget {
@@ -30,30 +31,7 @@ class CategoriesView extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
           itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(7.0),
-              child: Container(
-                height: 151,
-                width: 201,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(categories[index].picPath),
-                    fit: BoxFit.fill,
-                  ),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Center(
-                  child: Text(
-                    categories[index].categoryTitle,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            );
+            return CategoryBuilder(model: categories[index]);
           },
         ),
       ),
