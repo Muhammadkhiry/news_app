@@ -7,8 +7,8 @@ class NewsService {
   final Dio dio;
 
   Future<List<ArticleModel>> getArticles() async {
-    final String apiKey = "5812fc69fd634f9e9ab133c254228f23";
     final String baseURL = "https://newsapi.org/v2";
+    final String apiKey = "5812fc69fd634f9e9ab133c254228f23";
     Response response = await dio.get(
       "$baseURL/top-headlines?country=us&apiKey=$apiKey",
     );
