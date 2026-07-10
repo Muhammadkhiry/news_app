@@ -11,7 +11,7 @@ class CategoryBuilder extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 7.0),
       child: Container(
-        height: 151,
+        height: 131,
         width: 201,
         decoration: BoxDecoration(
           image: DecorationImage(

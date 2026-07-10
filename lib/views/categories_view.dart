@@ -7,18 +7,18 @@ class CategoriesView extends StatelessWidget {
 
   final List<CategoryModel> categories = const [
     CategoryModel(picPath: "assets/general.avif", categoryTitle: "General"),
-    CategoryModel(picPath: "assets/business.avif", categoryTitle: "Business"),
-    CategoryModel(
-      picPath: "assets/entertainment.avif",
-      categoryTitle: "Entertainment",
-    ),
-    CategoryModel(picPath: "assets/health.avif", categoryTitle: "Health"),
-    CategoryModel(picPath: "assets/science.avif", categoryTitle: "Science"),
-    CategoryModel(picPath: "assets/sports.avif", categoryTitle: "Sports"),
     CategoryModel(
       picPath: "assets/technology.jpeg",
       categoryTitle: "Technology",
     ),
+    CategoryModel(picPath: "assets/science.avif", categoryTitle: "Science"),
+    CategoryModel(picPath: "assets/sports.avif", categoryTitle: "Sports"),
+    CategoryModel(picPath: "assets/health.avif", categoryTitle: "Health"),
+    CategoryModel(
+      picPath: "assets/entertainment.avif",
+      categoryTitle: "Entertainment",
+    ),
+    CategoryModel(picPath: "assets/business.avif", categoryTitle: "Business"),
   ];
 
   @override
@@ -26,7 +26,7 @@ class CategoriesView extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: SizedBox(
-        height: 151,
+        height: 131,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
