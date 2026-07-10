@@ -10,7 +10,7 @@ class NewsService {
 
     try {
       final Response response = await dio.get(
-        "https://newsapi.org/v2/top-headlines?category=general&apiKey=5812fc69fd634f9e9ab133c254228f23",
+        "$baseURL/top-headlines?category=general&apiKey=$apiKey",
       );
 
       if (response.statusCode == 200) {
