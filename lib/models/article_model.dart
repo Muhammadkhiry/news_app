@@ -1,7 +1,7 @@
 class ArticleModel {
-  final String picPath, title, supTitle;
+  String? picPath, title, supTitle;
 
-  const ArticleModel({
+  ArticleModel({
     required this.picPath,
     required this.title,
     required this.supTitle,
@@ -9,9 +9,9 @@ class ArticleModel {
 
   factory ArticleModel.fromJson(json) {
     return ArticleModel(
-      picPath: json["articles"]["urlToImage"],
-      title: json["articles"]["title"],
-      supTitle: json["articles"]["description"],
+      picPath: json["urlToImage"],
+      title: json["title"],
+      supTitle: json["description"],
     );
   }
 }
