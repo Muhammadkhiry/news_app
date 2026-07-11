@@ -25,13 +25,11 @@ A modern Flutter News application that fetches the latest headlines from **NewsA
 
 ### Categories
 
-| Sports |
-|----------|--------|
-| ![](screenshots/sports_news.png) |
+| Sports | Science |
 
-| Science |
-|---------|----------|
-| ![](screenshots/science_news.png) |
+|----------|--------|
+| ![](screenshots/sports_news.png) | ![](screenshots/science_news.png) |
+
 
 | Technology | Different Categories |
 |------------|----------------------|
