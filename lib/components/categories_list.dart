@@ -2,60 +2,50 @@ import 'package:flutter/material.dart';
 import 'package:news_app/components/category_builder.dart';
 import 'package:news_app/models/category_model.dart';
 
-class CategoriesView extends StatelessWidget {
-  const CategoriesView({super.key});
+class CategoriesList extends StatelessWidget {
+  const CategoriesList({super.key});
 
   final List<CategoryModel> categories = const [
     CategoryModel(
-      picPath: "assets/general.avif",
-      categoryTitle: "General",
-      category: 'general',
-    ),
-    CategoryModel(
       picPath: "assets/technology.jpeg",
       categoryTitle: "Technology",
-      category: 'technology',
     ),
     CategoryModel(
       picPath: "assets/science.avif",
       categoryTitle: "Science",
-      category: 'science',
     ),
     CategoryModel(
       picPath: "assets/sports.avif",
       categoryTitle: "Sports",
-      category: 'sports',
     ),
     CategoryModel(
       picPath: "assets/health.avif",
       categoryTitle: "Health",
-      category: 'health',
     ),
     CategoryModel(
       picPath: "assets/entertainment.avif",
       categoryTitle: "Entertainment",
-      category: 'entertainment',
     ),
     CategoryModel(
       picPath: "assets/business.avif",
       categoryTitle: "Business",
-      category: 'business',
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: SizedBox(
-        height: 131,
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
-          itemBuilder: (context, index) {
-            return CategoryBuilder(model: categories[index]);
-          },
-        ),
+    return SizedBox(
+      height: 131,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+        itemBuilder: (context, index) {
+          return CategoryBuilder(
+            model: categories[index],
+            category: categories[index].categoryTitle,
+            title: categories[index].categoryTitle,
+          );
+        },
       ),
     );
   }

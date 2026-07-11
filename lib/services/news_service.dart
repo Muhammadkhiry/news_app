@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:news_app/models/article_model.dart';
 
 class NewsService {
-  Future<List<ArticleModel>> getArticles() async {
+  Future<List<ArticleModel>> getArticles({required String category}) async {
     final dio = Dio();
 
     final String baseURL = "https://newsapi.org/v2";
@@ -10,7 +10,7 @@ class NewsService {
 
     try {
       final Response response = await dio.get(
-        "$baseURL/top-headlines?category=general&apiKey=$apiKey",
+        "$baseURL/top-headlines?category=$category&apiKey=$apiKey",
       );
 
       if (response.statusCode == 200) {

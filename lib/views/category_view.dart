@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/components/categories_list.dart';
 import 'package:news_app/components/news_view_builder.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class CategoryView extends StatelessWidget {
+  const CategoryView({super.key, required this.category, required this.title});
+  final String category, title;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "News",
+              title,
               style: TextStyle(
                 fontSize: 24,
                 color: Color(0xff2F2F2F),
@@ -23,7 +23,7 @@ class HomeView extends StatelessWidget {
               ),
             ),
             Text(
-              "Cloud",
+              "News",
               style: TextStyle(
                 fontSize: 24,
                 color: Color(0xffD4BC98),
@@ -33,15 +33,10 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
+
       body: Padding(
-        padding: const EdgeInsets.all(9.0),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: CategoriesList()),
-            SliverToBoxAdapter(child: SizedBox(height: 15)),
-            NewsViewBuilder(category: 'general',),
-          ],
-        ),
+        padding: const EdgeInsets.all(15.0),
+        child: CustomScrollView(slivers: [NewsViewBuilder(category: category)]),
       ),
     );
   }
