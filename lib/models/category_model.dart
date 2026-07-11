@@ -1,5 +1,9 @@
 class CategoryModel {
-  final String picPath, categoryTitle;
+  final String picPath, categoryTitle, category;
 
-  const CategoryModel({required this.categoryTitle, required this.picPath});
+  const CategoryModel({
+    required this.categoryTitle,
+    required this.picPath,
+    required this.category,
+  });
 }

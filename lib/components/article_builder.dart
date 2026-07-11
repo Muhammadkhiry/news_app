@@ -14,28 +14,26 @@ class ArticleBuilder extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(15)),
-            child: model.picPath == null
-                ? Container(
-                    color: Colors.black,
-                    child: Text(
-                      "No image",
-                      style: TextStyle(fontSize: 32, color: Colors.white),
-                    ),
-                  )
-                : Image.network(
-                    model.picPath!,
-                    fit: BoxFit.cover,
-                    loadingBuilder: (context, child, loadingProgress) {
-                      if (loadingProgress == null) {
-                        return child;
-                      }
+            child: Image.network(
+              model.picPath!,
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                return const SizedBox(
+                  height: 200,
+                  child: Center(child: Icon(Icons.broken_image, size: 50)),
+                );
+              },
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) {
+                  return child;
+                }
 
-                      return const SizedBox(
-                        height: 200,
-                        child: Center(child: CircularProgressIndicator()),
-                      );
-                    },
-                  ),
+                return const SizedBox(
+                  height: 200,
+                  child: Center(child: CircularProgressIndicator()),
+                );
+              },
+            ),
           ),
           Text(
             model.title ?? "No title",
