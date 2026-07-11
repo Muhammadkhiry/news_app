@@ -1,42 +1,30 @@
 # 📰 News App
 
-A modern Flutter News application that fetches the latest news using the **NewsAPI** and displays them in a clean and responsive UI.
+A modern Flutter News application that fetches the latest headlines from **NewsAPI** and displays them in a clean, responsive, and user-friendly interface.
 
 ## ✨ Features
 
-- 📰 Browse the latest news.
-- 📂 View news by category.
-- 🌍 Fetch live data from NewsAPI.
-- 🖼️ Display article images.
-- ⏳ Loading indicator while fetching data.
-- ⚠️ Error handling for failed requests.
-- 📱 Responsive and clean UI.
+- 📰 Browse the latest news
+- 📂 Explore news by category
+- 🌐 Fetch live news using REST API
+- 🖼️ Display article images
+- ⏳ Loading indicator while fetching data
+- ⚠️ Error handling for failed requests
+- 📱 Responsive Material Design UI
 
 ---
 
 ## 📸 Screenshots
 
-### Home Screen
+<p align="center">
+  <img src="screenshots/entertainment_news.png" width="220"/>
+  <img src="screenshots/different_categories.png" width="220"/>
+</p>
 
-| Loading | Loaded |
-|---------|---------|
-| ![](screenshots/loading_home.png) | ![](screenshots/entertainment_news.png) |
-
----
-
-### Categories
-
-| Business | Sports |
-|----------|--------|
-| ![](screenshots/business_news.png) | ![](screenshots/sports_news.png) |
-
-| Health | Science |
-|---------|----------|
-| ![](screenshots/health_news.png) | ![](screenshots/science_news.png) |
-
-| Technology | Different Categories |
-|------------|----------------------|
-| ![](screenshots/tech_news.png) | ![](screenshots/different_categories.png) |
+<p align="center">
+  <img src="screenshots/tech_news.png" width="220"/>
+  <img src="screenshots/loading_home.png" width="220"/>
+</p>
 
 ---
 
@@ -52,7 +40,7 @@ A modern Flutter News application that fetches the latest news using the **NewsA
 
 ## 📂 Project Structure
 
-```
+```text
 lib
 │
 ├── components
@@ -71,17 +59,25 @@ lib
 │
 ├── views
 │   ├── category_view.dart
-│   └── home_view.dart
+│   ├── home_view.dart
+│   └── main.dart
 │
-└── main.dart
+└── assets
+    ├── business.avif
+    ├── entertainment.avif
+    ├── general.avif
+    ├── health.avif
+    ├── science.avif
+    ├── sports.avif
+    └── technology.jpeg
 ```
 
 ---
 
-## 📦 Packages Used
+## 📦 Dependencies
 
 ```yaml
-dio:
+dio: ^latest
 ```
 
 ---
@@ -91,7 +87,7 @@ dio:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/USERNAME/news_app.git
+git clone https://github.com/Muhammadkhiry/news_app.git
 ```
 
 ### Navigate to the project
@@ -114,7 +110,7 @@ flutter run
 
 ---
 
-## 🔑 API
+## 🔑 API Key
 
 This project uses **NewsAPI**.
 
@@ -122,23 +118,31 @@ Get your free API key from:
 
 https://newsapi.org/
 
-Then replace the API key inside:
+Replace your API key inside:
 
-```
+```dart
 lib/services/news_service.dart
 ```
+
+Example:
+
+```dart
+const String apiKey = "YOUR_API_KEY";
+```
+
+> **Note:** Never upload your personal API key to GitHub.
 
 ---
 
 ## 🎯 Future Improvements
 
-- Search functionality
-- Bookmark favorite articles
-- Dark Mode
-- Pull to Refresh
-- Infinite Scrolling
-- Local Cache
-- Better Error Handling
+- 🔍 Search for news
+- ❤️ Favorite articles
+- 🌙 Dark Mode
+- 🔄 Pull to Refresh
+- 📄 Infinite Scrolling
+- 💾 Local Caching
+- 🌍 Country Selection
 
 ---
 
@@ -146,5 +150,8 @@ lib/services/news_service.dart
 
 **Muhammad Khiry**
 
-GitHub:
-https://github.com/Muhammadkhiry
+- GitHub: https://github.com/Muhammadkhiry
+
+---
+
+### ⭐ If you like this project, don't forget to leave a Star!
