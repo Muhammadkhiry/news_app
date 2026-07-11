@@ -15,19 +15,29 @@ A modern Flutter News application that fetches the latest headlines from **NewsA
 ---
 
 ## 📸 Screenshots
+### Home Screen
 
-<p align="center">
-  <img src="screenshots/entertainment_news.png" width="220"/>
-  <img src="screenshots/different_categories.png" width="220"/>
-</p>
-
-<p align="center">
-  <img src="screenshots/tech_news.png" width="220"/>
-  <img src="screenshots/loading_home.png" width="220"/>
-</p>
+| Loading | Loaded |
+|---------|---------|
+| ![](screenshots/loading_home.png) | ![](screenshots/entertainment_news.png) |
 
 ---
 
+### Categories
+
+| Sports |
+|----------|--------|
+| ![](screenshots/sports_news.png) |
+
+| Science |
+|---------|----------|
+| ![](screenshots/science_news.png) |
+
+| Technology | Different Categories |
+|------------|----------------------|
+| ![](screenshots/tech_news.png) | ![](screenshots/different_categories.png) |
+
+---
 ## 🛠️ Built With
 
 - Flutter
